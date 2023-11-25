@@ -4,22 +4,22 @@
 
 using namespace std;
 
-class Placa_de_baza{
+class PlacaDeBaza{
     string soket;
     int frecventa;
     string format;
 
 public:
-    Placa_de_baza() {this->soket="";
+    PlacaDeBaza() {this->soket="";
         this->format="";
         this->frecventa=0;};
-    Placa_de_baza(string format1, string soket1, int frecventa1){
+    PlacaDeBaza(string format1, string soket1, int frecventa1){
         this->soket=std::move(soket1);
         this->format=std::move(format1);
         this->frecventa=frecventa1;
 
     }
-    Placa_de_baza(const Placa_de_baza& p){
+    PlacaDeBaza(const PlacaDeBaza& p){
         format=p.format;
         soket=p.soket;
         frecventa=p.frecventa;
@@ -31,12 +31,12 @@ public:
     }
 
 
-    friend ostream& operator <<(ostream& out, Placa_de_baza& a ){
+    friend ostream& operator <<(ostream& out, PlacaDeBaza& a ){
         out<<"Format:"<<a.format<<"\n"<<"Soket:"<<a.soket<<"\n"<<"Frecventa:"<<a.frecventa<<"MHz";
         return out;
     }
 
-    Placa_de_baza operator=(const Placa_de_baza& a){
+    PlacaDeBaza operator=(const PlacaDeBaza& a){
         if(this!=&a)
         {
             format=a.format;
@@ -132,7 +132,7 @@ public:
 
 int main() {
     MemorieRam Kingston8GB(8,3200);
-    Placa_de_baza AsusX570("ATX","AM4", 4000 );
+    PlacaDeBaza AsusX570("ATX","AM4", 4000 );
     Procesor Ryzen3500x("AM4", 3900, 6);
 
     string soket1=AsusX570.get_soket();
