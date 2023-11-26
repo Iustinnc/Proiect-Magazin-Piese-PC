@@ -36,7 +36,7 @@ public:
         while(pret1>=1)
         pret1=pret1/10;
 
-        return stele * 2 + 1 - pret1 > 10 ? 10 : stele * 2 + 1 - pret1;
+        return stele * 2 + 1 - pret1 > 10 ? 10 : stele * 2 + 1 - pret1; // NOLINT(*-misleading-indentation)
 
     }
     void setStele(float a) override{stele=a;}
@@ -47,7 +47,7 @@ public:
         out<<"Capacitate:"<<a.capacitate<<"GB\nFrecventa:"<<a.frecventa<<"MHz";
         return out;
     }
-    MemorieRam operator=(const MemorieRam& a){
+    MemorieRam operator=(const MemorieRam& a){ // NOLINT(*-unconventional-assign-operator)
         if(this!=&a){
             Componente::operator=(a);
             capacitate=a.capacitate;

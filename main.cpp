@@ -28,7 +28,7 @@ int main() {
 
 
 
-    try {
+    try { // NOLINT(*-misleading-indentation)
         MemorieRam a(8, -2000);
     }catch (const exception& e){
         cerr<<"Eroare: "<<e.what()<<'\n';

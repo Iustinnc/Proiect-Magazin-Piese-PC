@@ -23,7 +23,7 @@ public:
         if(frecventa<0)
         throw std::invalid_argument("Frecventa nu poate fi negativa");
 
-        if(nuclee<0)
+        if(nuclee<0) // NOLINT(*-misleading-indentation)
             throw std::invalid_argument("Nu poate avea un numar negativ de nuclee");
     }
     Procesor(const Procesor& x): Componente(x){
@@ -53,7 +53,7 @@ public:
         return out;
     }
 
-    Procesor operator=(const Procesor& a){
+    Procesor operator=(const Procesor& a){ // NOLINT(*-unconventional-assign-operator)
         if(this!=&a){
             Componente::operator=(a);
             soket=a.soket;

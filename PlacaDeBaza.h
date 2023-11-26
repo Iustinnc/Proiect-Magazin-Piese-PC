@@ -52,7 +52,7 @@ public:
         return out;
     }
 
-    PlacaDeBaza operator=(const PlacaDeBaza& a){
+    PlacaDeBaza operator=(const PlacaDeBaza& a){ // NOLINT(*-unconventional-assign-operator)
         if(this!=&a)
         {
             Componente::operator=(a);
